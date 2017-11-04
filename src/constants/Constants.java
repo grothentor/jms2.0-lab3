@@ -8,6 +8,7 @@ public interface Constants {
 
     public static final String SERVICE = "service";
     public static final String TEXT = "text";
+    public static final String MESSAGES = "messages";
 
     public static final String ERROR = "error";
 

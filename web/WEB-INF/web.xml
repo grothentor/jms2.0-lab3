@@ -11,8 +11,16 @@
         <servlet-name>JMSController</servlet-name>
         <servlet-class>servlets.JMSController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>JMSListner</servlet-name>
+        <servlet-class>servlets.JMSListner</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>JMSController</servlet-name>
         <url-pattern>/lab3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JMSListner</servlet-name>
+        <url-pattern>/messages</url-pattern>
     </servlet-mapping>
 </web-app>

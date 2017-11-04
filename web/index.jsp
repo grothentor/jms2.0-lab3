@@ -7,6 +7,7 @@
   </head>
   <body>
   <div>
+    <a target="_blank" href="/messages">Messages</a>
     <form action="lab3" method="post">
       <input type="hidden" name="service" value="sender"/>
       <p>
@@ -16,18 +17,7 @@
         <input type="submit" value="SEND"/>
       </p>
     </form>
-    <form action="lab3" method="post">
-      <input type="hidden" name="service" value="receiver"/>
-      <p>
-        <input type="submit" value="Receive" />
-      </p>
-    </form>
   </div>
-  <p>
-    <c:if test="${text ne null}">
-      Receiver message: ${text}
-    </c:if>
-  </p>
   <p>
     <c:if test="${error ne null}">
       ${error}

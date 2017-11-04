@@ -15,9 +15,6 @@ public class JMSController extends HttpServlet {
     @Inject
     private Sender sender;
 
-    @Inject
-    private Receiver receiver;
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
@@ -35,11 +32,6 @@ public class JMSController extends HttpServlet {
                     } else {
                         sender.send(text);
                     }
-                    break;
-                case Constants.RECEIVER:
-                    String receivedText = receiver.receive();
-
-                    request.setAttribute(Constants.TEXT, receivedText);
                     break;
                 default:
                     errorText = "Invalid service name";
